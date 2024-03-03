@@ -52,3 +52,17 @@ for (let i = 0; i < slides.length; i++) {
 		changeSlide (currentSlide, i)
 	} );		
 }
+
+const dot = document.querySelectorAll(".dot");
+dot[0].classList.add("dot_selected");
+
+const img = document.querySelector(".banner-img");
+const p = document.querySelector("p");
+
+function changeSlide(previousSlide, nextSlide) { 						
+	currentSlide = nextSlide;
+	dot[previousSlide].classList.remove("dot_selected");
+	img.src = "./assets/images/slideshow/" + slides[nextSlide].image;
+	p.innerHTML = slides[nextSlide].tagLine;
+	dot[nextSlide].classList.add("dot_selected");
+}
