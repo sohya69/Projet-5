@@ -40,3 +40,15 @@ arrowRight.addEventListener("click", function(){
 	}
 	changeSlide(currentSlide, nextSlide);
 });
+
+let currentSlide = 0;
+
+const dots = document.querySelector(".dots");
+for (let i = 0; i < slides.length; i++) {
+	const addDot = document.createElement("div"); 						
+	addDot.className = "dot";									
+	dots.appendChild(addDot);								
+	addDot.addEventListener('click', () => {
+		changeSlide (currentSlide, i)
+	} );		
+}
