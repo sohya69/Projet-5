@@ -66,3 +66,4 @@ function changeSlide(previousSlide, nextSlide) {
 	p.innerHTML = slides[nextSlide].tagLine;
 	dot[nextSlide].classList.add("dot_selected");
 }
+
